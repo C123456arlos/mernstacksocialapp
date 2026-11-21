@@ -41,4 +41,3 @@ const Messages = ({ selectedUser }) => {
 }
 
 export default Messages
-// 11:30

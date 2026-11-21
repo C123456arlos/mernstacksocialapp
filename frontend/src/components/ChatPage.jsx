@@ -17,7 +17,7 @@ const ChatPage = () => {
     
     const sendMessageHandler = async (receiverId) => {
             try {
-                const res = await axios.post(`http://localhost:8000/api/v1/message/send/${receiverId}`, { textMessage }, { headers: { 'Content-Type': 'application/json' }, withCredentials: true })
+                const res = await axios.post(`https://mernstacksocialapp.onrender.com/api/v1/message/send/${receiverId}`, { textMessage }, { headers: { 'Content-Type': 'application/json' }, withCredentials: true })
                 if (res.data.success) {
                 dispatch(setMessages([...messages, res.data.newMessage]))
                 // dispatch(setMessages([ res.data.newMessage]))
